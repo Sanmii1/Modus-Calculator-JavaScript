@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modus Data Kelompok</title>
+    <style>
+      .table-container,
+      .data-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .table-container {
+        flex-direction: column;
+      }
+      table,
+      td,
+      th {
+        border: solid 1px black;
+        width: 30%;
+        border-collapse: collapse;
+      }
+      th {
+        padding: 2px;
+      }
+      input {
+        width: 15px;
+      }
+      button {
+        margin-top: 10px;
+        width: 100px;
+        height: 30px;
+      }
+      @media (max-width: 600px) {
+        table {
+          width: 66%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <table>
+        <tr id="baris-1">
+          <th>Data</th>
+          <th>Frekuensi</th>
+        </tr>
+        <tr id="baris-2">
+          <td id="kolum-data">
+            <div class="data-container">
+              <input type="text" id="input-kolom-1-1"/>
+              <p>---</p>
+              <input type="text" id="input-kolom-1-2"/>
+            </div>
+          </td>
+          <td id="kolum-fekuensi">
+            <div class="data-container">
+            <input type="text" id="input-kolom-2-1"/>
+          </td>
+        </tr>
+        <tr id="baris-3">
+            <td id="kolum-data">
+                <div class="data-container">
+                  <input type="text" id="input-kolom-1-3"/>
+                  <p>---</p>
+                  <input type="text" id="input-kolom-1-4"/>
+                </div>
+              </td>
+              <td id="kolum-fekuensi">
+                <div class="data-container">
+                <input type="text" id="input-kolom-2-2"/>
+              </td>
+        </tr>
+      </table>
+      <div>
+      <button onclick="tambahtabel()">Tambah table</button>
+      <button onclick="hapustabel()">Hapus Table</button>
+      <button onclick="hitungnilai()">Hitung</button>
+      </div>
+    <div>
+      <h3 style="font-family: sans-serif; text-align: center;">Hasilnya</h3>
+      <p id="hasil"></p>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
